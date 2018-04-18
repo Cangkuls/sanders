@@ -1,4 +1,4 @@
-NAME ?= Ghoul-sanders-orio-64bitch
+NAME ?= oppai-dragon-sanders-orio-64bitch
 
 DATE := $(shell date +'%Y%m%d-%H%M')
 
