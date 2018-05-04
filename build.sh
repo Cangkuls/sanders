@@ -42,7 +42,7 @@ export ARCH=arm64
 export SUBARCH=arm64
 
 #misc
-CONFIG=zpx_defconfig
+CONFIG=inferno_defconfig
 THREAD="-j$(nproc --all)"
 
 #main script
@@ -125,6 +125,8 @@ if [ "$choice" == "4" ]; then
   cp $KERN_IMG $ZIP_DIR
   cp $DTB $ZIP_DIR
   make &>/dev/null
+  cp *.zip* ~/sanders
+  make clean &>/dev/null
   cd ..
   echo -e "$purple(i)Flashable zip generated under $ZIP_DIR.$nc"
   echo -e "$cyan#######################################################################$nc"
