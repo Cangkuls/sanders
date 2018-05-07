@@ -37,7 +37,7 @@ CONFIG_DIR=$KERNEL_DIR/arch/arm64/configs
 #export
 export KBUILD_BUILD_USER="Cangkuls"
 export KBUILD_BUILD_HOST="ZeroProjectX"
-export CROSS_COMPILE="$(command -v ccache) /root/aarch64-linux-android-4.9/bin/aarch64-linux-android-"
+export CROSS_COMPILE="$(command -v ccache) /root/aarch64-linux-gnu/bin/aarch64-linux-gnu-"
 export ARCH=arm64
 export SUBARCH=arm64
 
