@@ -625,7 +625,10 @@ CDEFINES += -DEXISTS_MSM_SMSM
 endif
 
 # Fix build for GCC 4.7
-EXTRA_CFLAGS += -Wno-maybe-uninitialized -Wno-unused-function -Wno-switch-unreachable
+EXTRA_CFLAGS += -Wno-unused-function -Wno-typedef-redefinition
+EXTRA_CFLAGS += $(call cc-disable-warning,maybe-uninitialized,)
+EXTRA_CFLAGS += $(call cc-disable-warning,switch-unreachable,)
+EXTRA_CFLAGS += -Wno-array-bounds -Wno-enum-conversion -Wno-non-literal-null-conversion
 
 ifeq ($(CONFIG_WLAN_OFFLOAD_PACKETS),y)
 CDEFINES += -DWLAN_FEATURE_OFFLOAD_PACKETS
