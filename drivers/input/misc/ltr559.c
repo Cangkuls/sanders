@@ -414,8 +414,7 @@ static irqreturn_t ltr559_irq_handler(int irq, void *arg)
 	if (NULL == data)
 		return IRQ_HANDLED;
 	disable_irq_nosync(data->irq);
-	queue_delayed_work(system_power_efficient_wq,
-		&data->ps_work, msecs_to_jiffies(polling_time));
+	schedule_delayed_work(&data->ps_work, msecs_to_jiffies(polling_time));
 	return IRQ_HANDLED;
 }
 
