@@ -18,3 +18,5 @@ EXTRA_CFLAGS += -Wno-parentheses
 obj-$(CONFIG_MSM_VIDC_V4L2) += governors/
 
 obj-$(CONFIG_MSM_VIDC_VMEM) += vmem/
+
+CFLAGS_hfi_response_handler.o := $(call cc-option,-Wno-frame-larger-than=)
