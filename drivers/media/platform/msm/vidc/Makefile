@@ -18,7 +18,3 @@ EXTRA_CFLAGS += -Wno-parentheses
 obj-$(CONFIG_MSM_VIDC_V4L2) += governors/
 
 obj-$(CONFIG_MSM_VIDC_VMEM) += vmem/
-
-# TODO: remove me b/62057517
-subdir-ccflags-y += \
-	-Wno-frame-larger-than=
